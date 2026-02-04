@@ -1,0 +1,188 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+body {
+  height: 100vh;
+  background: linear-gradient(135deg, #ff758c, #ff7eb3);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.container {
+  background: white;
+  padding: 30px;
+  border-radius: 20px;
+  text-align: center;
+  width: 90%;
+  max-width: 350px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+}
+
+h1 {
+  color: #ff4d6d;
+  margin-bottom: 10px;
+}
+
+p {
+  margin-bottom: 25px;
+  font-size: 16px;
+}
+
+.buttons {
+  position: relative;
+  height: 60px;
+}
+
+button {
+  padding: 10px 20px;
+  font-size: 16px;
+  border: none;
+  border-radius: 25px;
+  cursor: pointer;
+  position: absolute;
+}
+
+#yesBtn {
+  background: #ff4d6d;
+  color: white;
+  left: 30px;
+}
+
+#noBtn {
+  background: #999;
+  color: white;
+  right: 30px;
+}
+
+/* 🧸 Teddy Background Animation */
+.teddy-bg {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  z-index: 0;
+}
+
+.teddy-bg span {
+  position: absolute;
+  font-size: 40px;
+  animation: floatTeddy 12s linear infinite;
+  opacity: 0.6;
+}
+
+.teddy-bg span:nth-child(1) {
+  left: 10%;
+  animation-duration: 10s;
+}
+
+.teddy-bg span:nth-child(2) {
+  left: 30%;
+  animation-duration: 14s;
+  font-size: 50px;
+}
+
+.teddy-bg span:nth-child(3) {
+  left: 60%;
+  animation-duration: 12s;
+}
+
+.teddy-bg span:nth-child(4) {
+  left: 80%;
+  animation-duration: 16s;
+  font-size: 55px;
+}
+
+@keyframes floatTeddy {
+  0% {
+    bottom: -60px;
+    transform: translateX(0) rotate(0deg);
+  }
+  100% {
+    bottom: 110%;
+    transform: translateX(40px) rotate(360deg);
+  }
+}
+
+/* container ko upar lao */
+.container {
+  position: relative;
+  z-index: 2;
+}
+
+/* 🌸 Background animations */
+.bg-animations {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  z-index: 0;
+}
+
+/* ❤️ Hearts */
+.heart {
+  position: absolute;
+  font-size: 30px;
+  animation: floatUp 10s linear infinite;
+  opacity: 0.6;
+}
+
+.heart:nth-child(1) { left: 20%; animation-duration: 9s; }
+.heart:nth-child(2) { left: 50%; animation-duration: 12s; font-size: 40px; }
+.heart:nth-child(3) { left: 75%; animation-duration: 11s; }
+
+/* 🧸 Teddy PNG */
+.teddy {
+  position: absolute;
+  width: 80px;
+  animation: floatUp 15s linear infinite;
+  opacity: 0.7;
+}
+
+.teddy:nth-of-type(1) { left: 30%; animation-duration: 14s; }
+.teddy:nth-of-type(2) { left: 65%; animation-duration: 18s; width: 100px; }
+
+/* ✨ Sparkles */
+body::after {
+  content: "✨ ✨ ✨ ✨ ✨";
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  animation: sparkle 3s linear infinite;
+  opacity: 0.4;
+}
+
+/* Animations */
+@keyframes floatUp {
+  0% {
+    bottom: -100px;
+    transform: translateX(0) rotate(0deg);
+  }
+  100% {
+    bottom: 110%;
+    transform: translateX(40px) rotate(360deg);
+  }
+}
+
+@keyframes sparkle {
+  0% { opacity: 0.2; }
+  50% { opacity: 0.5; }
+  100% { opacity: 0.2; }
+}
+
+/* Card always on top */
+.container {
+  position: relative;
+  z-index: 2;
+}
