@@ -32,7 +32,7 @@ yesBtn.addEventListener("click", () => {
 
   // change card content
   container.innerHTML = `
-    <h1>🧸❤️I knew It❤️</h1>
+    <h1>🧸❤️I know It❤️</h1>
     <h2>You just made my day 💖</h2>
     <h3>Happy Valentine's Day 🧸✨</h3>
   `;
